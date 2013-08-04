@@ -11,12 +11,18 @@
                 </thead>
                     {{#each model}}
                 <tr>
-                    <td> <a href="#"> {{title}}</a>  <small class="muted">by {{author}}</small> </td>
+                    <td>
+                        {{#linkTo 'post' this}}
+                        {{title}} <small class="muted">by {{author}}</small> </td>
+                    {{/linkTo}}
 
                 </tr>
                     {{/each}}
 
             </table>
+        </div>
+        <div class="span9">
+            {{outlet}}
         </div>
     </div>
 </div>
