@@ -1,0 +1,22 @@
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span3">
+            <table class="table" border="0">
+                <thead>
+                    <tr>
+                        <th>
+                            Recent posts
+                        </th>
+                    </tr>
+                </thead>
+                    {{#each model}}
+                <tr>
+                    <td> <a href="#"> {{title}}</a>  <small class="muted">by {{author}}</small> </td>
+
+                </tr>
+                    {{/each}}
+
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,4 +1,5 @@
-Blog.PostRoute = Ember.Route.extend({
+Blog.PostsRoute = Ember.Route.extend({
   // Implement your controller here.
+
 });
 

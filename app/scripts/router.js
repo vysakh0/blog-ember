@@ -1,6 +1,8 @@
 Blog.Router.map(function () {
 
-  this.resource('posts');
+  this.resource('posts', function(){
+    this.resource('post', { path: 'post_id' });
+  });
   this.resource('about');
 });
 

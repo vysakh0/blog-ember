@@ -91,7 +91,7 @@ Now click the `About` link in the header! it should work! yey! On inspecting the
 #### Creating posts:
 
 ``` bash
-yo ember:model post title:string author:string body:string
+yo ember:model post title:string author:string intro:string extended:string  publishedAt:date
 ```
 
 Do not overwrite the routes, lets add the resource `posts` to `routes.js`
@@ -113,3 +113,32 @@ We have the template, view, controller for `posts`, lets add the `posts` link in
     <li>{{#linkTo 'about'}}About{{/linkTo}}</li>
 </ul>
 ```
+
+##### Create Fixtures or sample posts data
+
+In the `posts.js` model file add the fixture data
+
+``` js
+
+Blog.Post.Fixtures = [
+{
+  id: 1,
+  author: "Vysakh",
+  publishedAt: new Date('4-8-2013'),
+  intro: "This is just an intro",
+  extended: "Yup it is :)"
+},
+
+{
+  id: 2,
+  author: "Dale",
+  publishedAt: new Date('4-8-2013'),
+  intro: "This is just an intro from Dale",
+  extended: "Wow!Yup it is :)"
+}
+
+];
+
+```
+
+Edit the `posts.hbs` (create if it is not created during scaffold) to show all the list of posts
