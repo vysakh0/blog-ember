@@ -21,6 +21,7 @@ module.exports = function (grunt) {
         dist: 'dist'
     };
 
+    grunt.loadNpmTasks('grunt-ember-templates');
     grunt.initConfig({
         yeoman: yeomanConfig,
         watch: {
